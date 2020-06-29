@@ -1,0 +1,43 @@
+---
+title: 如何更改应用程序图标
+description: 如何更改应用程序图标
+author: dansimp
+ms.assetid: bd6cfb22-086b-43fd-b6f9-1907b5f16e83
+ms.reviewer: ''
+manager: dansimp
+ms.author: dansimp
+ms.pagetype: mdop, appcompat, virtualization
+ms.mktglfcycl: deploy
+ms.sitesec: library
+ms.prod: w10
+ms.date: 06/16/2016
+ms.openlocfilehash: 5b37892ae7a3a02c5adaa4df7a30321b7002a402
+ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "10801683"
+---
+# <span data-ttu-id="5dd56-103">如何更改应用程序图标</span><span class="sxs-lookup"><span data-stu-id="5dd56-103">How to Change an Application Icon</span></span>
+
+
+<span data-ttu-id="5dd56-104">你可以使用以下过程直接从应用程序虚拟化客户端管理控制台中的**应用程序**节点的 "**结果**" 窗格中更改与所选应用程序关联的图标。</span><span class="sxs-lookup"><span data-stu-id="5dd56-104">You can use the following procedure to change an icon associated with the selected application directly from the **Results** pane of the **Application** node in the Application Virtualization Client Management Console.</span></span>
+
+**<span data-ttu-id="5dd56-105">更改应用程序图标</span><span class="sxs-lookup"><span data-stu-id="5dd56-105">To change an application icon</span></span>**
+
+1.  <span data-ttu-id="5dd56-106">将光标移动到 "**结果**" 窗格，然后右键单击所需的应用程序。</span><span class="sxs-lookup"><span data-stu-id="5dd56-106">Move the cursor to the **Results** pane, and right-click the desired application.</span></span>
+
+2.  <span data-ttu-id="5dd56-107">选择 "**属性**"。</span><span class="sxs-lookup"><span data-stu-id="5dd56-107">Select **Properties**.</span></span>
+
+3.  <span data-ttu-id="5dd56-108">在 "**常规**" 选项卡上，单击 "**更改图标**"。</span><span class="sxs-lookup"><span data-stu-id="5dd56-108">On the **General** tab, click **Change Icon**.</span></span>
+
+4.  <span data-ttu-id="5dd56-109">选择所需的图标，或浏览到另一个位置以选择图标。</span><span class="sxs-lookup"><span data-stu-id="5dd56-109">Select the desired icon, or browse to another location to select the icon.</span></span> <span data-ttu-id="5dd56-110">选择图标后，单击 **"确定"**。</span><span class="sxs-lookup"><span data-stu-id="5dd56-110">After you've selected the icon, click **OK**.</span></span> <span data-ttu-id="5dd56-111">新图标将显示在 "**结果**" 窗格中。</span><span class="sxs-lookup"><span data-stu-id="5dd56-111">The new icon appears in the **Results** pane.</span></span>
+
+ 
+
+ 
+
+
+
+
+
