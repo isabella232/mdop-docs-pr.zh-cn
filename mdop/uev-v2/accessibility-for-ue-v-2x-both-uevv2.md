@@ -1,0 +1,108 @@
+---
+title: UE-V 2.x 的辅助功能
+description: UE-V 2.x 的辅助功能
+author: dansimp
+ms.assetid: ec05da5f-4558-4d4d-9b58-3b8ed68cf2fe
+ms.reviewer: ''
+manager: dansimp
+ms.author: dansimp
+ms.pagetype: mdop, virtualization
+ms.mktglfcycl: deploy
+ms.sitesec: library
+ms.prod: w10
+ms.date: 08/30/2016
+ms.openlocfilehash: b9b7993425d1a9c9f6a51b1114fdca34f46de0e5
+ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "10803397"
+---
+# <span data-ttu-id="7b123-103">UE-V 2.x 的辅助功能</span><span class="sxs-lookup"><span data-stu-id="7b123-103">Accessibility for UE-V 2.x</span></span>
+
+
+<span data-ttu-id="7b123-104">Microsoft 致力于使其产品和服务更易于每个人使用。</span><span class="sxs-lookup"><span data-stu-id="7b123-104">Microsoft is committed to making its products and services easier for everyone to use.</span></span> <span data-ttu-id="7b123-105">本部分提供有关使残障人士更易于访问本产品及其相应文档的功能和服务的信息。</span><span class="sxs-lookup"><span data-stu-id="7b123-105">This section provides information about features and services that make this product and its corresponding documentation more accessible for people with disabilities.</span></span>
+
+## <span data-ttu-id="7b123-106">通过几个键击访问任何命令</span><span class="sxs-lookup"><span data-stu-id="7b123-106">Access any command with a few keystrokes</span></span>
+
+
+<span data-ttu-id="7b123-107">您可以使用两个键击访问大多数命令。</span><span class="sxs-lookup"><span data-stu-id="7b123-107">You can access most commands by using two keystrokes.</span></span> <span data-ttu-id="7b123-108">若要使用访问键，请执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="7b123-108">To use an access key:</span></span>
+
+1.  <span data-ttu-id="7b123-109">按 Alt。</span><span class="sxs-lookup"><span data-stu-id="7b123-109">Press Alt.</span></span>
+
+    <span data-ttu-id="7b123-110">键盘快捷方式将显示在当前视图中可用的每个功能的上方。</span><span class="sxs-lookup"><span data-stu-id="7b123-110">The keyboard shortcuts are displayed over each feature that is available in the current view.</span></span>
+
+2.  <span data-ttu-id="7b123-111">按下要使用的功能上的键盘快捷方式中显示的字母。</span><span class="sxs-lookup"><span data-stu-id="7b123-111">Press the letter that is shown in the keyboard shortcut over the feature that you want to use.</span></span>
+
+### <span data-ttu-id="7b123-112">其他格式的文档</span><span class="sxs-lookup"><span data-stu-id="7b123-112">Documentation in alternative formats</span></span>
+
+<span data-ttu-id="7b123-113">如果阅读或处理打印材料时遇到困难，可使用更易于访问的格式获取许多 Microsoft 产品的文档。</span><span class="sxs-lookup"><span data-stu-id="7b123-113">If you have difficulty reading or handling printed materials, you can obtain the documentation for many Microsoft products in more accessible formats.</span></span> <span data-ttu-id="7b123-114">可以在 Microsoft 辅助功能网站上查看辅助产品文档的索引。</span><span class="sxs-lookup"><span data-stu-id="7b123-114">You can view an index of accessible product documentation on the Microsoft Accessibility website.</span></span> <span data-ttu-id="7b123-115">此外，你还可以从学习 Ally 获取其他 Microsoft 出版物，以前称为盲人的录制 & 诵读困难，Inc. Ally 将这些文档分发给其分发服务的注册的合格成员。</span><span class="sxs-lookup"><span data-stu-id="7b123-115">In addition, you can obtain additional Microsoft publications from Learning Ally, formerly known as Recording for the Blind & Dyslexic, Inc. Learning Ally distributes these documents to registered, eligible members of their distribution service.</span></span>
+
+<span data-ttu-id="7b123-116">若要了解 microsoft 产品文档的可用性以及微软出版社的书籍的信息，请使用以下联系人。</span><span class="sxs-lookup"><span data-stu-id="7b123-116">For information about the availability of Microsoft product documentation and books from Microsoft Press, use the following contact.</span></span>
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong><span data-ttu-id="7b123-117">学习 Ally （以前称为盲人 &amp; 诵读困难，inc. 的录制）</span><span class="sxs-lookup"><span data-stu-id="7b123-117">Learning Ally (formerly Recording for the Blind &amp; Dyslexic, Inc.)</span></span></strong></p>
+<p><span data-ttu-id="7b123-118">20 Roszel 道路</span><span class="sxs-lookup"><span data-stu-id="7b123-118">20 Roszel Road</span></span></p>
+<p><span data-ttu-id="7b123-119">Princeton，NJ 08540</span><span class="sxs-lookup"><span data-stu-id="7b123-119">Princeton, NJ 08540</span></span></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="7b123-120">美国境内的电话号码：</span><span class="sxs-lookup"><span data-stu-id="7b123-120">Telephone number from within the United States:</span></span></p></td>
+<td align="left"><p><span data-ttu-id="7b123-121">（800）221-4792</span><span class="sxs-lookup"><span data-stu-id="7b123-121">(800) 221-4792</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="7b123-122">美国和加拿大之外的电话号码：</span><span class="sxs-lookup"><span data-stu-id="7b123-122">Telephone number from outside the United States and Canada:</span></span></p></td>
+<td align="left"><p><span data-ttu-id="7b123-123">（609）452-0606</span><span class="sxs-lookup"><span data-stu-id="7b123-123">(609) 452-0606</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="7b123-124">传入</span><span class="sxs-lookup"><span data-stu-id="7b123-124">Fax:</span></span></p></td>
+<td align="left"><p><span data-ttu-id="7b123-125">（609）987-8116</span><span class="sxs-lookup"><span data-stu-id="7b123-125">(609) 987-8116</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><a href="https://go.microsoft.com/fwlink/p/?linkid=239" data-raw-source="[http://www.learningally.org/](https://go.microsoft.com/fwlink/p/?linkid=239)">http://www.learningally.org/</a></p></td>
+<td align="left"><p><span data-ttu-id="7b123-126">Web 地址可能会更改，因此您可能无法连接到此处提及的网站或网站。</span><span class="sxs-lookup"><span data-stu-id="7b123-126">Web addresses can change, so you might be unable to connect to the website or sites that are mentioned here.</span></span></p></td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+### <span data-ttu-id="7b123-127">为听觉障碍人士提供的客户服务</span><span class="sxs-lookup"><span data-stu-id="7b123-127">Customer service for people with hearing impairments</span></span>
+
+<span data-ttu-id="7b123-128">如果您有听力障碍，可通过文本电话（TTY/TDD）服务完成对 Microsoft 产品和客户服务的完全访问：</span><span class="sxs-lookup"><span data-stu-id="7b123-128">If you are deaf or hard-of-hearing, complete access to Microsoft product and customer services is available through a text telephone (TTY/TDD) service:</span></span>
+
+-   <span data-ttu-id="7b123-129">对于客户服务，请联系 Microsoft 销售信息中心（800）892-5234 太平洋时间星期一到星期五（不包括节假日）之间的6:30 上午和 5:30 PM。</span><span class="sxs-lookup"><span data-stu-id="7b123-129">For customer service, contact Microsoft Sales Information Center at (800) 892-5234 between 6:30 AM and 5:30 PM Pacific Time, Monday through Friday, excluding holidays.</span></span>
+
+-   <span data-ttu-id="7b123-130">有关美国的技术帮助，请在太平洋时间周一至周五（节假日除外）的上午12：00和 6:00 PM （800） 6:00 892-5234 联系 Microsoft 产品支持服务。</span><span class="sxs-lookup"><span data-stu-id="7b123-130">For technical assistance in the United States, contact Microsoft Product Support Services at (800) 892-5234 between 6:00 AM and 6:00 PM Pacific Time, Monday through Friday, excluding holidays.</span></span> <span data-ttu-id="7b123-131">在加拿大，从星期一到星期五（节假日除外）拨打（905） 8:00 8:00 568-9641 （东部时间）。</span><span class="sxs-lookup"><span data-stu-id="7b123-131">In Canada, dial (905) 568-9641 between 8:00 AM and 8:00 PM Eastern Time, Monday through Friday, excluding holidays.</span></span>
+
+<span data-ttu-id="7b123-132">Microsoft 支持服务将在使用服务时遵守价格、条款和条件。</span><span class="sxs-lookup"><span data-stu-id="7b123-132">Microsoft Support Services are subject to the prices, terms, and conditions in place at the time that the service is used.</span></span>
+
+## <span data-ttu-id="7b123-133">有关详细信息</span><span class="sxs-lookup"><span data-stu-id="7b123-133">For more information</span></span>
+
+
+<span data-ttu-id="7b123-134">有关计算机的辅助功能如何帮助改进残疾人士生活的详细信息，请参阅[Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/p/?linkid=8431)。</span><span class="sxs-lookup"><span data-stu-id="7b123-134">For more information about how accessible technology for computers can help to improve the lives of people with disabilities, see the [Microsoft Accessibility website](https://go.microsoft.com/fwlink/p/?linkid=8431).</span></span>
+
+
+
+
+
+
+## <span data-ttu-id="7b123-135">相关主题</span><span class="sxs-lookup"><span data-stu-id="7b123-135">Related topics</span></span>
+
+
+[<span data-ttu-id="7b123-136">UE-V 2.x 的技术参考</span><span class="sxs-lookup"><span data-stu-id="7b123-136">Technical Reference for UE-V 2.x</span></span>](technical-reference-for-ue-v-2x-both-uevv2.md)
+
+ 
+
+ 
+
+
+
+
+
