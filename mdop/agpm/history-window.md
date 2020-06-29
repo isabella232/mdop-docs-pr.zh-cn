@@ -72,7 +72,7 @@ ms.locfileid: "10802756"
 <thead>
 <tr class="header">
 <th align="left">GPO 特性</th>
-<th align="left">描述</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 <tbody>
@@ -132,7 +132,7 @@ ms.locfileid: "10802756"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>设置</strong></p></td>
+<td align="left"><p><strong>“设置”</strong></p></td>
 <td align="left"><p>生成基于 HTML 的报表，显示所选版本的 GPO 中的设置。</p></td>
 </tr>
 <tr class="even">
