@@ -1,0 +1,141 @@
+---
+title: 挂起的 GPO 命令
+description: 挂起的 GPO 命令
+author: dansimp
+ms.assetid: b62f49e1-43ab-4c93-8102-96cd97a4adad
+ms.reviewer: ''
+manager: dansimp
+ms.author: dansimp
+ms.pagetype: mdop
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.prod: w10
+ms.date: 06/16/2016
+ms.openlocfilehash: aa5afed2335d75132c0fd99c69e0b5e09985d98f
+ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "10803173"
+---
+# <span data-ttu-id="b5d53-103">挂起的 GPO 命令</span><span class="sxs-lookup"><span data-stu-id="b5d53-103">Pending GPO Commands</span></span>
+
+
+<span data-ttu-id="b5d53-104">"**挂起**" 选项卡：</span><span class="sxs-lookup"><span data-stu-id="b5d53-104">The **Pending** tab:</span></span>
+
+-   <span data-ttu-id="b5d53-105">显示组策略对象（Gpo）的列表，其中包含 GPO 管理操作的挂起请求（如创建、控制、部署或删除）。</span><span class="sxs-lookup"><span data-stu-id="b5d53-105">Displays a list of Group Policy Objects (GPOs) with pending requests for GPO management actions (such as creation, control, deployment, or deletion).</span></span>
+
+-   <span data-ttu-id="b5d53-106">提供快捷菜单，其中包含用于响应挂起的请求和显示 Gpo 的历史记录和报告的命令。</span><span class="sxs-lookup"><span data-stu-id="b5d53-106">Provides a shortcut menu with commands for responding to pending requests and for displaying the history and reports for GPOs.</span></span>
+
+-   <span data-ttu-id="b5d53-107">显示具有访问选定 GPO 的权限的组和用户的列表。</span><span class="sxs-lookup"><span data-stu-id="b5d53-107">Displays a list of the groups and users who have permission to access a selected GPO.</span></span>
+
+<span data-ttu-id="b5d53-108">右键单击此选项卡上的 "**组策略对象**" 列表，将显示快捷菜单，包括以下任何适用选项。</span><span class="sxs-lookup"><span data-stu-id="b5d53-108">Right-clicking the **Group Policy Objects** list on this tab displays a shortcut menu, including whichever of the following options are applicable.</span></span>
+
+## <span data-ttu-id="b5d53-109">控件和历史记录</span><span class="sxs-lookup"><span data-stu-id="b5d53-109">Control and history</span></span>
+
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="b5d53-110">命令</span><span class="sxs-lookup"><span data-stu-id="b5d53-110">Command</span></span></th>
+<th align="left"><span data-ttu-id="b5d53-111">作用</span><span class="sxs-lookup"><span data-stu-id="b5d53-111">Effect</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong><span data-ttu-id="b5d53-112">历史记录</span><span class="sxs-lookup"><span data-stu-id="b5d53-112">History</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-113">打开一个窗口，列出存档中保存的选定 GPO 的所有版本。</span><span class="sxs-lookup"><span data-stu-id="b5d53-113">Open a window listing all versions of the selected GPO saved within the archive.</span></span> <span data-ttu-id="b5d53-114">从历史记录中，你可以获取 GPO 中的设置报告、比较 GPO 的两个版本、将 GPO 与模板进行比较或回退到早期版本的 GPO。</span><span class="sxs-lookup"><span data-stu-id="b5d53-114">From the history, you can obtain a report of the settings within a GPO, compare two versions of a GPO, compare a GPO to a template, or roll back to an earlier version of a GPO.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong><span data-ttu-id="b5d53-115">提取</span><span class="sxs-lookup"><span data-stu-id="b5d53-115">Withdraw</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-116">撤消请求以在请求被批准之前创建、控制或删除所选 GPO。</span><span class="sxs-lookup"><span data-stu-id="b5d53-116">Withdraw your pending request to create, control, or delete the selected GPO before the request has been approved.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong><span data-ttu-id="b5d53-117">批准</span><span class="sxs-lookup"><span data-stu-id="b5d53-117">Approve</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-118">完成来自编辑器的挂起请求以创建、控制或删除所选 GPO。</span><span class="sxs-lookup"><span data-stu-id="b5d53-118">Complete a pending request from an Editor to create, control, or delete the selected GPO.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong><span data-ttu-id="b5d53-119">&</span><span class="sxs-lookup"><span data-stu-id="b5d53-119">Reject</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-120">拒绝来自编辑器的挂起请求以创建、控制或删除所选 GPO。</span><span class="sxs-lookup"><span data-stu-id="b5d53-120">Deny a pending request from an Editor to create, control, or delete the selected GPO.</span></span></p></td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+## <span data-ttu-id="b5d53-121">报告</span><span class="sxs-lookup"><span data-stu-id="b5d53-121">Reports</span></span>
+
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="b5d53-122">命令</span><span class="sxs-lookup"><span data-stu-id="b5d53-122">Command</span></span></th>
+<th align="left"><span data-ttu-id="b5d53-123">作用</span><span class="sxs-lookup"><span data-stu-id="b5d53-123">Effect</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong><span data-ttu-id="b5d53-124">设置</span><span class="sxs-lookup"><span data-stu-id="b5d53-124">Settings</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-125">生成基于 HTML 或基于 XML 的报表，显示所选 GPO 中的设置，或显示从组织单位到 Gpo 最近控制、导入或签入时的选定 Gpo 的链接。</span><span class="sxs-lookup"><span data-stu-id="b5d53-125">Generate an HTML-based or XML-based report displaying the settings within the selected GPO or display links to the selected GPOs from organizational units as of when the GPOs are most recently controlled, imported, or checked in.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong><span data-ttu-id="b5d53-126">不同之处</span><span class="sxs-lookup"><span data-stu-id="b5d53-126">Differences</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-127">生成用于比较两个选定 Gpo 或所选 GPO 和模板内的设置的基于 HTML 或基于 XML 的报表。</span><span class="sxs-lookup"><span data-stu-id="b5d53-127">Generate an HTML-based or XML-based report comparing the settings within two selected GPOs or within the selected GPO and a template.</span></span></p></td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+## <span data-ttu-id="b5d53-128">杂项</span><span class="sxs-lookup"><span data-stu-id="b5d53-128">Miscellaneous</span></span>
+
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="b5d53-129">命令</span><span class="sxs-lookup"><span data-stu-id="b5d53-129">Command</span></span></th>
+<th align="left"><span data-ttu-id="b5d53-130">作用</span><span class="sxs-lookup"><span data-stu-id="b5d53-130">Effect</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><strong><span data-ttu-id="b5d53-131">刷新</span><span class="sxs-lookup"><span data-stu-id="b5d53-131">Refresh</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-132">更新组策略管理控制台（GPMC）的显示以合并任何更改。</span><span class="sxs-lookup"><span data-stu-id="b5d53-132">Update the display of the Group Policy Management Console (GPMC) to incorporate any changes.</span></span> <span data-ttu-id="b5d53-133">在刷新显示之前，某些更改不可见。</span><span class="sxs-lookup"><span data-stu-id="b5d53-133">Some changes are not visible until the display is refreshed.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong><span data-ttu-id="b5d53-134">帮助</span><span class="sxs-lookup"><span data-stu-id="b5d53-134">Help</span></span></strong></p></td>
+<td align="left"><p><span data-ttu-id="b5d53-135">显示 AGPM 的帮助。</span><span class="sxs-lookup"><span data-stu-id="b5d53-135">Display help for AGPM.</span></span></p></td>
+</tr>
+</tbody>
+</table>
+
+ 
+
+### <span data-ttu-id="b5d53-136">其他参考资料</span><span class="sxs-lookup"><span data-stu-id="b5d53-136">Additional references</span></span>
+
+-   [<span data-ttu-id="b5d53-137">“内容”选项卡</span><span class="sxs-lookup"><span data-stu-id="b5d53-137">Contents Tab</span></span>](contents-tab-agpm40.md)
+
+-   [<span data-ttu-id="b5d53-138">执行审批者任务</span><span class="sxs-lookup"><span data-stu-id="b5d53-138">Performing Approver Tasks</span></span>](performing-approver-tasks-agpm40.md)
+
+-   [<span data-ttu-id="b5d53-139">执行审阅者任务</span><span class="sxs-lookup"><span data-stu-id="b5d53-139">Performing Reviewer Tasks</span></span>](performing-reviewer-tasks-agpm40.md)
+
+ 
+
+ 
+
+
+
+
+
