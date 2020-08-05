@@ -11,19 +11,19 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/05/2017
-ms.openlocfilehash: b09ea8161b6801c62552f1c0d0ef8455dc111e2f
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: f8a69fb323d9f47c5b906ac3abc6ec59376ee6f7
+ms.sourcegitcommit: 0a7dee11289780336d9c24ebbf27c5c1ffee441c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10802080"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "10905599"
 ---
 # 选择要安装的 AGPM 版本
 
 
-MicrosoftAdvanced 组策略管理（AGPM）的每个版本都支持特定版本的 Windows 操作系统。 我们强烈建议你在同一操作系统行上运行 AGPM 客户端和 AGPM 服务器。 例如，windows 10 适用于 windows Server 2016、windows 8.1 和 Windows Server2012 R2 等。
+MicrosoftAdvanced 组策略管理的每个版本 (AGPM) 支持特定版本的 Windows 操作系统。 我们强烈建议你在同一操作系统行上运行 AGPM 客户端和 AGPM 服务器。 例如，windows 10 适用于 windows Server 2016、windows 8.1 和 Windows Server2012 R2 等。
 
-我们建议你在域中的最新版本的操作系统上安装 AGPM 服务器。 AGPM 使用组策略管理控制台（GPMC）备份和还原组策略对象（Gpo）。 由于较新版本的 GPMC 提供的其他策略设置在早期版本中不可用，因此你可以使用最新版本的操作系统管理更多策略设置。
+我们建议你在域中的最新版本的操作系统上安装 AGPM 服务器。 AGPM 使用组策略管理控制台 (GPMC) 备份和还原 Gpo)  (的组策略对象。 由于较新版本的 GPMC 提供的其他策略设置在早期版本中不可用，因此你可以使用最新版本的操作系统管理更多策略设置。
 
 所有版本的 AGPM 都只能管理在同一版本或早期版本的运行 AGPM 的操作系统中引入的策略设置。 例如，如果在 Windows Server 2012 上安装了 AGPM 4.0 SP2，则可以管理 Windows Server 2012 或更早版本中引入的策略设置，但不能管理稍后在 Windows 8.1 或 Windows Server2012 R2 中引入的策略设置。
 
@@ -53,42 +53,47 @@ MicrosoftAdvanced 组策略管理（AGPM）的每个版本都支持特定版本�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Windows Server 2016 或 Windows 10</p></td>
-<td align="left"><p>Windows Server 2016 或 Windows 10</p></td>
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
 <td align="left"><p>支持</p></td>
 </tr>
-<tr class="even">
+ <tr class="even">
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
+<td align="left"><p>Windows Server 2019 或 Windows 10</p></td>
+<td align="left"><p>支持</p></td>
+</tr>
+<tr class="edd">
 <td align="left"><p>Windows Server2012 R2</p></td>
 <td align="left"><p>Windows 10</p></td>
 <td align="left"><p>通过在 KB 4015786 中概述的注意事项提供支持 <a href="https://support.microsoft.com/help/4015786/known-issues-managing-a-windows-10-group-policy-client-in-windows-serv" data-raw-source="[KB 4015786](https://support.microsoft.com/help/4015786/known-issues-managing-a-windows-10-group-policy-client-in-windows-serv)"></a>
 </p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p>Windows Server2012 R2 或 Windows 8。1</p></td>
 <td align="left"><p>Windows Server2012 R2 或 Windows 8。1</p></td>
 <td align="left"><p>支持</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p>Windows Server2012 R2、Windows Server 2012 或 Windows 8。1</p></td>
 <td align="left"><p>Windows Server 2012 或 Windows 8。1</p></td>
 <td align="left"><p>受支持，但不能编辑仅存在于 Windows 8.1 中的策略设置或首选项</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p>Windows Server2008R2 或 Windows7</p></td>
 <td align="left"><p>Windows Server2008R2 或 Windows7</p></td>
 <td align="left"><p>受支持，但不能编辑仅存在于 Windows 8.1 中的策略设置或首选项</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p>Windows Server 2012、Windows Server2008R2 或 Windows7</p></td>
-<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 （SP1）</p></td>
+<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 (SP1) </p></td>
 <td align="left"><p>受支持，但不能编辑仅存在于 Windows Server2012 R2、Windows Server 2012、Windows Server2008R2、Windows 8.1 或 Windows7 中的策略设置或首选项</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p>Windows Server2008 或 Windows Vista SP1</p></td>
 <td align="left"><p>Windows Server 2012、Windows Server2008R2、Windows 8 或 Windows7</p></td>
 <td align="left"><p>不支持</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p>Windows Server2008 或 Windows Vista SP1</p></td>
 <td align="left"><p>Windows Server2008 或 Windows Vista SP1</p></td>
 <td align="left"><p>受支持，但无法报告或编辑仅存在于 Windows Server2012 R2、Windows Server 2012、Windows Server2008R2、Windows 8.1 或 Windows7 中的策略设置或首选项</p></td>
@@ -138,7 +143,7 @@ MicrosoftAdvanced 组策略管理（AGPM）的每个版本都支持特定版本�
 </tr>
 <tr class="even">
 <td align="left"><p>Windows Server 2012、Windows Server2008R2 或 Windows7</p></td>
-<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 （SP1）</p></td>
+<td align="left"><p>Windows Server2008 或 WindowsVista Service Pack 1 (SP1) </p></td>
 <td align="left"><p>受支持，但不能编辑仅存在于 Windows Server2012 R2、Windows Server 2012、Windows Server2008R2、Windows 8.1 或 Windows7 中的策略设置或首选项</p></td>
 </tr>
 <tr class="odd">
@@ -281,11 +286,11 @@ MicrosoftAdvanced 组策略管理（AGPM）的每个版本都支持特定版本�
 <td align="left"><p>3.0</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>WindowsVista 未安装 service pack （32位）</p></td>
+<td align="left"><p>WindowsVista 未安装 service pack (32 位) </p></td>
 <td align="left"><p>2.5</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Windows Server2003 （32位）</p></td>
+<td align="left"><p>Windows Server2003 (32 位) </p></td>
 <td align="left"><p>2.5</p></td>
 </tr>
 </tbody>
@@ -296,7 +301,7 @@ MicrosoftAdvanced 组策略管理（AGPM）的每个版本都支持特定版本�
 ## 如何获取 MDOP 技术
 
 
-AGPM 4.0 SP2 是 Microsoft 桌面优化包（MDOP）的一部分。 MDOP 是 Microsoft 软件保障的一部分。 有关 Microsoft 软件保证和获取 MDOP 的详细信息，请参阅[如何获取 mdop](https://go.microsoft.com/fwlink/?LinkId=322049) （ https://go.microsoft.com/fwlink/?LinkId=322049) 。
+AGPM 4.0 SP2 是 Microsoft 桌面优化包 (MDOP) 的一部分。 MDOP 是 Microsoft 软件保障的一部分。 有关 Microsoft 软件保证和获取 MDOP 的详细信息，请参阅[如何获取 mdop](https://go.microsoft.com/fwlink/?LinkId=322049) (https://go.microsoft.com/fwlink/?LinkId=322049) 。
 
 ## 相关主题
 
