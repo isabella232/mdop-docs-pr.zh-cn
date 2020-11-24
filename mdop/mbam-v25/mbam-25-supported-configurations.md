@@ -11,29 +11,29 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 10/24/2018
-ms.openlocfilehash: 262cd8c259dc37b291cdaf02caf0e20b7515d38b
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 8ed7915e33c5e4735a7c58674ed5f7d6da8e9a06
+ms.sourcegitcommit: 9087f0a1b5bd3f81a9b790d5e39fdf39c18a2411
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10803459"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "11182924"
 ---
 # MBAM 2.5 支持的配置
 
 
-你可以在独立拓扑中或在与 System Center Configuration Manager 集成 MBAM 的 Configuration Manager 集成拓扑中运行 Microsoft BitLocker 管理和监视（MBAM）2.5。 如果对生产环境中的任一拓扑使用推荐的配置，MBAM 最多支持 500000 MBAM 客户端。 有关在每个服务器上为每个拓扑配置的推荐体系结构和功能的信息，请参阅[MBAM 2.5 的高级体系结构](high-level-architecture-for-mbam-25.md)。
+可以在独立拓扑中或在与 System Center Configuration Manager 集成 MBAM 的 Configuration Manager 集成拓扑中运行 Microsoft BitLocker 管理和监视 (MBAM) 2.5。 如果对生产环境中的任一拓扑使用推荐的配置，MBAM 最多支持 500000 MBAM 客户端。 有关在每个服务器上为每个拓扑配置的推荐体系结构和功能的信息，请参阅 [MBAM 2.5 的高级体系结构](high-level-architecture-for-mbam-25.md)。
 
-有关特定于 Configuration Manager 集成拓扑的其他配置，请参阅[MBAM 支持的 Configuration Manager 版本](#bkmk-cm-ramreqs)。
+有关特定于 Configuration Manager 集成拓扑的其他配置，请参阅 [MBAM 支持的 Configuration Manager 版本](#bkmk-cm-ramreqs)。
 
 **注意**  
-Microsoft 提供对当前服务包的支持，在某些情况下，还提供了之前的服务包。 若要查找产品的支持时间表，请参阅[支持生命周期的服务包](https://go.microsoft.com/fwlink/p/?LinkId=31975)。 有关 Microsoft 支持生命周期策略的其他信息，请参阅[Microsoft 支持生命周期支持策略常见问题解答](https://go.microsoft.com/fwlink/p/?LinkId=31976)。
+Microsoft 提供对当前服务包的支持，在某些情况下，还提供了之前的服务包。 若要查找产品的支持时间表，请参阅 [支持生命周期的服务包](https://go.microsoft.com/fwlink/p/?LinkId=31975)。 有关 Microsoft 支持生命周期策略的其他信息，请参阅 [Microsoft 支持生命周期支持策略常见问题解答](https://go.microsoft.com/fwlink/p/?LinkId=31976)。
 
 
 
 ## MBAM 支持的语言
 
 
-下表显示了 MBAM 2.5 和 MBAM 2.5 SP1 中的 MBAM 客户端（包括自助门户）和 MBAM 服务器支持的语言。
+下表显示了 MBAM 客户端支持的语言 (包括 Self-Service 门户) 和 MBAM 2.5 和 MBAM 2.5 SP1 中的 MBAM 服务器。
 
 **MBAM 2.5 SP1 中支持的语言：**
 
@@ -50,42 +50,42 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>捷克语（捷克共和国） cs-CZ</p>
-<p>丹麦语（丹麦） da-深色</p>
-<p>荷兰语（荷兰） nl-NL</p>
-<p>英语（美国） en-us</p>
-<p>芬兰语（芬兰） wlan</p>
-<p>法语（法国） fr-fr</p>
-<p>德语（德国） de</p>
-<p>希腊语（希腊） el-GR</p>
-<p>匈牙利语（匈牙利） hu-HU</p>
-<p>意大利语（意大利） it</p>
-<p>日语（日本） ja-jp</p>
-<p>朝鲜语（韩国） ko-KR</p>
-<p>挪威语、博克马尔语（挪威） nb-否</p>
-<p>波兰语（波兰） pl-PL</p>
-<p>葡萄牙语（巴西） pt-BR</p>
-<p>葡萄牙语（葡萄牙） pt</p>
-<p>俄语（俄罗斯） ru-RU</p>
-<p>斯洛伐克语（斯洛伐克） sk-SK</p>
-<p>西班牙语（西班牙） es</p>
-<p>瑞典语（瑞典） sv-SE</p>
-<p>土耳其语（土耳其） tr-TR</p>
-<p>斯洛文尼亚语（斯洛文尼亚） sl-SI</p>
-<p>简体中文版简体中文（PRC） zh-cn&platform-CN</p>
-<p>繁体中文（台湾） zh-cn&platform-幼圆</p></td>
+<td align="left"><p>捷克 (捷克共和国) CZ</p>
+<p>丹麦 (丹麦) da-深色</p>
+<p>荷兰语 (荷兰) nl-NL</p>
+<p>英语 (美国) en-us</p>
+<p>芬兰语 (芬兰) fi</p>
+<p>法语 (法国) fr-fr</p>
+<p>德国 () de</p>
+<p>希腊语 (希腊) el-GR</p>
+<p>匈牙利语 (匈牙利) hu-HU</p>
+<p>意大利 (意大利) it</p>
+<p>日语 (日本) ja-jp</p>
+<p>韩国 (韩国) ko-KR</p>
+<p>挪威语、博克马尔语 (挪威) nb-否</p>
+<p>波兰语 (波兰) pl</p>
+<p>葡萄牙语 (巴西) pt-BR</p>
+<p>葡萄牙语 (葡萄牙) pt</p>
+<p>俄语 (俄罗斯) ru</p>
+<p>斯洛伐克语 (斯洛伐克) sk-SK</p>
+<p>西班牙 (西班牙) es</p>
+<p>瑞典语 (瑞典) sv-SE</p>
+<p>土耳其语 (土耳其) tr-TR</p>
+<p>斯洛文尼亚语 (斯洛文尼亚) sl-SI</p>
+<p>简体中文 (中国) zh-cn&platform-CN</p>
+<p>繁体中文 (台湾) zh-cn&platform</p></td>
 <td align="left"><ul>
-<li><p>英语（美国） en-us</p></li>
-<li><p>法语（法国） fr-fr</p></li>
-<li><p>德语（德国） de</p></li>
-<li><p>意大利语（意大利） it</p></li>
-<li><p>日语（日本） ja-jp</p></li>
-<li><p>朝鲜语（韩国） ko-KR</p></li>
-<li><p>葡萄牙语（巴西） pt-BR</p></li>
-<li><p>俄语（俄罗斯） ru-RU</p></li>
-<li><p>西班牙语（西班牙） es</p></li>
-<li><p>简体中文版简体中文（PRC） zh-cn&platform-CN</p></li>
-<li><p>繁体中文（台湾） zh-cn&platform-幼圆</p></li>
+<li><p>英语 (美国) en-us</p></li>
+<li><p>法语 (法国) fr-fr</p></li>
+<li><p>德国 () de</p></li>
+<li><p>意大利 (意大利) it</p></li>
+<li><p>日语 (日本) ja-jp</p></li>
+<li><p>韩国 (韩国) ko-KR</p></li>
+<li><p>葡萄牙语 (巴西) pt-BR</p></li>
+<li><p>俄语 (俄罗斯) ru</p></li>
+<li><p>西班牙 (西班牙) es</p></li>
+<li><p>简体中文 (中国) zh-cn&platform-CN</p></li>
+<li><p>繁体中文 (台湾) zh-cn&platform</p></li>
 </ul></td>
 </tr>
 </tbody>
@@ -109,30 +109,30 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 <tbody>
 <tr class="odd">
 <td align="left"><ul>
-<li><p>英语（美国） en-us</p></li>
-<li><p>法语（法国） fr-fr</p></li>
-<li><p>德语（德国） de</p></li>
-<li><p>意大利语（意大利） it</p></li>
-<li><p>日语（日本） ja-jp</p></li>
-<li><p>朝鲜语（韩国） ko-KR</p></li>
-<li><p>葡萄牙语（巴西） pt-BR</p></li>
-<li><p>俄语（俄罗斯） ru-RU</p></li>
-<li><p>西班牙语（西班牙） es</p></li>
-<li><p>简体中文版简体中文（PRC） zh-cn&platform-CN</p></li>
-<li><p>繁体中文（台湾） zh-cn&platform-幼圆</p></li>
+<li><p>英语 (美国) en-us</p></li>
+<li><p>法语 (法国) fr-fr</p></li>
+<li><p>德国 () de</p></li>
+<li><p>意大利 (意大利) it</p></li>
+<li><p>日语 (日本) ja-jp</p></li>
+<li><p>韩国 (韩国) ko-KR</p></li>
+<li><p>葡萄牙语 (巴西) pt-BR</p></li>
+<li><p>俄语 (俄罗斯) ru</p></li>
+<li><p>西班牙 (西班牙) es</p></li>
+<li><p>简体中文 (中国) zh-cn&platform-CN</p></li>
+<li><p>繁体中文 (台湾) zh-cn&platform</p></li>
 </ul></td>
 <td align="left"><ul>
-<li><p>英语（美国） en-us</p></li>
-<li><p>法语（法国） fr-fr</p></li>
-<li><p>德语（德国） de</p></li>
-<li><p>意大利语（意大利） it</p></li>
-<li><p>日语（日本） ja-jp</p></li>
-<li><p>朝鲜语（韩国） ko-KR</p></li>
-<li><p>葡萄牙语（巴西） pt-BR</p></li>
-<li><p>俄语（俄罗斯） ru-RU</p></li>
-<li><p>西班牙语（西班牙） es</p></li>
-<li><p>简体中文版简体中文（PRC） zh-cn&platform-CN</p></li>
-<li><p>繁体中文（台湾） zh-cn&platform-幼圆</p></li>
+<li><p>英语 (美国) en-us</p></li>
+<li><p>法语 (法国) fr-fr</p></li>
+<li><p>德国 () de</p></li>
+<li><p>意大利 (意大利) it</p></li>
+<li><p>日语 (日本) ja-jp</p></li>
+<li><p>韩国 (韩国) ko-KR</p></li>
+<li><p>葡萄牙语 (巴西) pt-BR</p></li>
+<li><p>俄语 (俄罗斯) ru</p></li>
+<li><p>西班牙 (西班牙) es</p></li>
+<li><p>简体中文 (中国) zh-cn&platform-CN</p></li>
+<li><p>繁体中文 (台湾) zh-cn&platform</p></li>
 </ul></td>
 </tr>
 </tbody>
@@ -166,6 +166,12 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p>Windows Server 2019</p></td>
+<td align="left"><p>标准版或数据中心</p></td>
+<td align="left"></td>
+<td align="left"><p>64 位</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p>Windows Server 2016</p></td>
 <td align="left"><p>标准版或数据中心</p></td>
 <td align="left"></td>
@@ -194,11 +200,11 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 
 
 
-企业域必须包含至少一个 Windows Server 2008 （或更高版本）域控制器。
+企业域必须包含至少一个 Windows Server 2008 (或更高版本) 域控制器。
 
 ### <a href="" id="bkmk-stand-alone-ramreqs"></a>MBAM 服务器处理器、RAM 和磁盘空间要求-独立拓扑
 
-这些要求适用于 MBAM 独立拓扑。 有关 Configuration Manager 集成拓扑的要求，请参阅[MBAM 服务器处理器、RAM 和磁盘空间要求-配置管理器集成拓扑](#bkmk-cm-ramreqs)。
+这些要求适用于 MBAM 独立拓扑。 有关 Configuration Manager 集成拓扑的要求，请参阅 [MBAM 服务器处理器、RAM 和磁盘空间要求-配置管理器集成拓扑](#bkmk-cm-ramreqs)。
 
 <table>
 <colgroup>
@@ -215,7 +221,7 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>处理者</p></td>
+<td align="left"><p>处理器</p></td>
 <td align="left"><p>2.33 GHz</p></td>
 <td align="left"><p>2.33 GHz 或更高版本</p></td>
 </tr>
@@ -236,7 +242,7 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 
 ### <a href="" id="bkmk-cm-ramreqs"></a>MBAM 服务器处理器、RAM 和磁盘空间要求-配置管理器集成拓扑
 
-下表列出了使用 Configuration Manager 集成拓扑时 MBAM 服务器的服务器处理器、RAM 和磁盘空间要求。 有关独立拓扑的要求，请参阅[MBAM 服务器处理器、RAM 和磁盘空间要求-独立拓扑](#bkmk-stand-alone-ramreqs)。
+下表列出了使用 Configuration Manager 集成拓扑时 MBAM 服务器的服务器处理器、RAM 和磁盘空间要求。 有关独立拓扑的要求，请参阅 [MBAM 服务器处理器、RAM 和磁盘空间要求-独立拓扑](#bkmk-stand-alone-ramreqs)。
 
 <table>
 <colgroup>
@@ -253,7 +259,7 @@ Microsoft 提供对当前服务包的支持，在某些情况下，还提供了�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>处理者</p></td>
+<td align="left"><p>处理器</p></td>
 <td align="left"><p>2.33 GHz</p></td>
 <td align="left"><p>2.33 GHz 或更高版本</p></td>
 </tr>
@@ -291,7 +297,7 @@ MBAM 支持以下版本的 Configuration Manager。
 </thead>
 <tbody>
 <tr class="even">
-<td align="left"><p>Microsoft System Center Configuration Manager （当前分支），最高为1902的版本</p></td>
+<td align="left"><p>Microsoft System Center Configuration Manager (当前分支) ，最高为1902的版本</p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>64 位</p></td>
 </tr>
@@ -302,7 +308,7 @@ MBAM 支持以下版本的 Configuration Manager。
 <td align="left"><p>64 位</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Microsoft System Center Configuration Manager （LTSB-版本1606）</p></td>
+<td align="left"><p>Microsoft System Center Configuration Manager (LTSB-版本 1606) </p></td>
 <td align="left"><p></p></td>
 <td align="left"><p>64 位</p></td>
 </tr>
@@ -330,7 +336,7 @@ MBAM 支持以下版本的 Configuration Manager。
 
 下表列出了 MBAM 服务器功能支持的 Microsoft SQL Server 版本，其中包括恢复数据库、合规性和审核数据库以及报表功能。 所需版本适用于独立版或 Configuration Manager 集成拓扑。
 
-必须以**sql \ _Latin1 \ _General \ _CP1 _CI \ _AS**排序规则安装 sql Server。
+必须以 **sql \ _Latin1 \ _General \ _CP1 _CI \ _AS** 排序规则安装 sql Server。
 
 <table>
 <colgroup>
@@ -349,6 +355,10 @@ MBAM 支持以下版本的 Configuration Manager。
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left"><p>Microsoft SQL Server 2019</p></td>
+<td align="left"><p>标准版、企业版或数据中心</p></td>
+<td align="left"><p></p></td>
+<td align="left"><p>64 位</p></td><br/><tr class="even">
 <td align="left"><p>Microsoft SQL Server 2017</p></td>
 <td align="left"><p>标准版、企业版或数据中心</p></td>
 <td align="left"><p></p></td>
@@ -377,12 +387,14 @@ MBAM 支持以下版本的 Configuration Manager。
 </table>
 
 **注意**  
-为了支持 SQL 2016，您必须安装 MDOP 的三月2017服务版本 https://www.microsoft.com/download/details.aspx?id=54967 ，并支持 SQL 2017 必须安装用于 mdop 的2018年7月的服务发布 https://www.microsoft.com/download/details.aspx?id=57157 。 通常，通过始终使用最近的服务更新保持最新，因为它还包括所有缺陷修复和新功能。
+MBAM 具有最高支持的兼容性级别140。 在 SQL Server 2019 上创建的新数据库的默认兼容级别是150，在创建数据库之后，需要使用 ALTER DATABASE 命令将其更改为140或更低。 从 SQL server 2017 或更低版本迁移的现有数据库将保持其以前的兼容级别，无需更改。
+
+为了支持 SQL 2016，您必须安装 MDOP 的三月2017服务版本 https://www.microsoft.com/download/details.aspx?id=54967  ，并支持 SQL 2017 必须安装用于 mdop 的2018年7月的服务发布 https://www.microsoft.com/download/details.aspx?id=57157 。 通常，通过始终使用最近的服务更新保持最新，因为它还包括所有缺陷修复和新功能。
 
 
 ### <a href="" id="bkmk-sql-stand-alone-ramreqs"></a>SQL Server 处理器、RAM 和磁盘空间要求-独立拓扑
 
-下表列出了使用独立拓扑时所推荐的 SQL Server 计算机的服务器处理器、RAM 和磁盘空间要求。 将这些要求用作指南。 特定要求将根据您的企业中支持的客户端计算机的数量而有所不同。 若要查看 Configuration Manager 集成拓扑的要求，请参阅[SQL Server 处理器、RAM 和磁盘空间要求-配置管理器集成拓扑](#bkmk-cm-sql-ramreqs)。
+下表列出了使用独立拓扑时所推荐的 SQL Server 计算机的服务器处理器、RAM 和磁盘空间要求。 将这些要求用作指南。 特定要求将根据您的企业中支持的客户端计算机的数量而有所不同。 若要查看 Configuration Manager 集成拓扑的要求，请参阅 [SQL Server 处理器、RAM 和磁盘空间要求-配置管理器集成拓扑](#bkmk-cm-sql-ramreqs)。
 
 <table>
 <colgroup>
@@ -399,7 +411,7 @@ MBAM 支持以下版本的 Configuration Manager。
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>处理者</p></td>
+<td align="left"><p>处理器</p></td>
 <td align="left"><p>2.33 GHz</p></td>
 <td align="left"><p>2.33 GHz 或更高版本</p></td>
 </tr>
@@ -420,7 +432,7 @@ MBAM 支持以下版本的 Configuration Manager。
 
 ### <a href="" id="bkmk-cm-sql-ramreqs"></a>SQL Server 处理器、RAM 和磁盘空间要求-配置管理器集成拓扑
 
-下表列出了使用 Configuration Manager 集成拓扑时 Microsoft SQL Server 计算机的服务器处理器、RAM 和磁盘空间要求，请参阅[SQL Server 处理器、RAM 和磁盘空间要求-独立拓扑](#bkmk-sql-stand-alone-ramreqs)。
+下表列出了使用 Configuration Manager 集成拓扑时 Microsoft SQL Server 计算机的服务器处理器、RAM 和磁盘空间要求，请参阅 [SQL Server 处理器、RAM 和磁盘空间要求-独立拓扑](#bkmk-sql-stand-alone-ramreqs)。
 
 <table>
 <colgroup>
@@ -437,7 +449,7 @@ MBAM 支持以下版本的 Configuration Manager。
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>处理者</p></td>
+<td align="left"><p>处理器</p></td>
 <td align="left"><p>2.33 GHz</p></td>
 <td align="left"><p>2.33 GHz 或更高版本</p></td>
 </tr>
@@ -587,7 +599,7 @@ MBAM 支持以下版本的 Configuration Manager。
 
 ## Azure IaaS 中的 MBAM
 
-MBAM 服务器可以在上述任何支持的操作系统版本上以服务（IaaS）的形式部署在上述任何支持的操作系统版本上，连接到在本地托管的 Active Directory 或也托管在 Azure IaaS 中的 Active Directory。  [此处](https://msdn.microsoft.com/library/azure/jj156090.aspx)提供了在 Azure IaaS 上设置和配置 Active Directory 的文档。
+MBAM 服务器可以作为服务部署在以上列出的任何受支持的操作系统版本上的服务 (IaaS) ，连接到托管在本地的 Active Directory 或也托管在 Azure IaaS 中的 Active Directory。  [此处](https://msdn.microsoft.com/library/azure/jj156090.aspx)提供了在 Azure IaaS 上设置和配置 Active Directory 的文档。
 
 MBAM 客户端在虚拟机上不受支持，并且在 Azure IaaS 上也不受支持。
 
@@ -615,8 +627,8 @@ MBAM 客户端在虚拟机上不受支持，并且在 Azure IaaS 上也不受支
 
 
 ## 已获得 MBAM 的建议？
-- 在[此处](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)添加或投票建议。 
-- 对于 MBAM 问题，请使用[MBAM TechNet 论坛](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。
+- 在 [此处](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)添加或投票建议。 
+- 对于 MBAM 问题，请使用 [MBAM TechNet 论坛](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。
 
 
 
