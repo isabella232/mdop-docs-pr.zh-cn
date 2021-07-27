@@ -11,19 +11,19 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/16/2016
-ms.openlocfilehash: 5660757c5fe58b52f9805add781529b47a5c0bd5
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: 0cd77c05a10d6d3b43b1592fd261ccfa3f64376f
+ms.sourcegitcommit: 64dedf394f98c06588a8e5f6d56c34af5431d984
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10798139"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675788"
 ---
-# MBAM 2.5 的技术参考
+# <a name="technical-reference-for-mbam-25"></a>MBAM 2.5 的技术参考
 
 
-本部分包括有关 Microsoft BitLocker 管理和监视（MBAM）2.5 中的功能的技术信息。
+本部分包含有关 Microsoft BitLocker Administration and Monitoring (MBAM) 2.5 中的功能的技术信息。
 
-## 技术参考信息
+## <a name="technical-reference-information"></a>技术参考信息
 
 
 -   [客户端事件日志](client-event-logs.md)
@@ -34,7 +34,11 @@ ms.locfileid: "10798139"
 
     本主题提供 MBAM 的服务器事件列表。
 
-## MBAM 操作的其他资源
+- [BitLocker 部署比较](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
+
+    本主题提供有关 BitLocker 部署比较图表的信息。
+
+## <a name="other-resources-for-mbam-operations"></a>MBAM 操作其他资源
 
 
 [Microsoft BitLocker 管理和监控 2.5](index.md)
@@ -49,14 +53,13 @@ ms.locfileid: "10798139"
 
 [MBAM 2.5 疑难解答](troubleshooting-mbam-25.md)
 
-## 已获得 MBAM 的建议？
-- 在[此处](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)添加或投票建议。 
-- 对于 MBAM 问题，请使用[MBAM TechNet 论坛](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。
+## <a name="got-a-suggestion-for-mbam"></a>有关于 MBAM 的建议吗？
+- 在此处添加建议或对建议 [投票](http://mbam.uservoice.com/forums/268571-microsoft-bitlocker-administration-and-monitoring)。 
+- 对于 MBAM 问题，请使用 [MBAM TechNet 论坛](https://social.technet.microsoft.com/Forums/home?forum=mdopmbam)。
 
- 
+ 
 
- 
-
+ 
 
 
 
