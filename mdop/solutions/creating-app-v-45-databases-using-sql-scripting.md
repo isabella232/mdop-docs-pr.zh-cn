@@ -11,224 +11,224 @@ ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 06/16/2016
-ms.openlocfilehash: d9ab2c102a43701bfdeaac49359b4ca3c4a063fa
-ms.sourcegitcommit: 354664bc527d93f80687cd2eba70d1eea024c7c3
+ms.openlocfilehash: c119f1d43a70cce04dd6151697318f7cf6a8d1f2
+ms.sourcegitcommit: 3e0500abde44d6a09c7ac8e3caf5e25929b490a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "10803876"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11910587"
 ---
-# 使用 SQL 脚本创建 App-V 4.5 数据库
+# <a name="creating-app-v-45-databases-using-sql-scripting"></a>使用 SQL 脚本创建 App-V 4.5 数据库
 
 
-**此解决方案的用途是什么？** 管理应用程序虚拟化（app-v）4.5 数据库的信息技术专业人员。
+**Who此解决方案是否适用于？** 管理 Application Virtualization (App-V) 4.5 数据库的信息技术专业人员。
 
-**本指南如何帮助你？** 本解决方案介绍并介绍在管理员安装对 SQL Server 不具有 "sysadmin" 权限时，安装 Microsoft Application Virtualization 服务器的过程。
+**本指南如何帮助你？** 此解决方案解释并记录当管理员安装时对安装过程没有"sysadmin"权限时安装 Microsoft Application Virtualization Server SQL Server。
 
-## 概述
+## <a name="overview"></a>概述
 
 
-安装 Microsoft Application Virtualization 4.5 （App-v）的挑战之一是，安装程序假定安装服务器功能的用户不仅是本地计算机管理员，还在将承载数据存储的 SQL server 上拥有 SQL 管理员权限。 此要求基于在安装过程中创建数据库以及相应的角色和权限这一事实。 但是，在大多数企业中，SQL server 与将要安装 app-v 的基础结构团队分开管理。 这些安全要求使 SQL 管理员有可能很难让基础结构管理员安装 app-v，从而获得足够的权限;同样，SQL 管理员将不具有为基础结构团队安装产品所需的权限。
+安装 Microsoft Application Virtualization 4.5 (App-V) 的一个难题是，安装程序假定安装服务器功能的用户不仅将成为本地计算机管理员，而且对将承载数据存储的 SQL 服务器具有 SQL 管理员权限。 此要求基于这样一个事实，即数据库以及相应的角色和权限是在安装时创建的。 但是，在大多数企业中，SQL服务器独立于将安装 App-V 的基础结构团队进行管理。 这些安全要求会使管理员难以SQL为安装 App-V 的基础结构管理员授予足够的权限;同样，SQL管理员将没有为基础结构团队安装产品所需的权限。
 
-当前，尝试安装 app-v 的管理员必须具有 SQL "sysadmin" 权限。 在以前版本的产品中，SQL 管理员允许 SQL 管理员创建临时 "sysadmin" 帐户或在安装过程中显示，以提供具有 "sysadmin" 权限的凭据。 在此版本中，脚本在发布产品中提供，供所有管理员在实施其基础结构时使用。
+目前，尝试安装 App-V 的管理员必须具有SQL"sysadmin"权限。 在以前版本的产品中，SQL 管理员允许安装程序创建临时"sysadmin"帐户或在安装过程中存在以提供具有"sysadmin"权限的凭据。 在此版本中，脚本在已发布的产品中提供，供所有管理员在实施其基础结构时使用。
 
-此白皮书将讨论安装需要划分为两个单独任务的方案：创建 SQL 数据库和安装 App-v server 功能。 SQL 管理员可以查看 SQL 脚本并进行修改以解决与其他数据库的任何冲突，或支持与其他工具的集成。 脚本的结果是允许 SQL 管理员准备数据库，以便基础结构管理员不必在 SQL server 上获得任何高级权限。 这在安全策略将禁止此操作的环境中非常重要。
+本白皮书讨论需要将安装分为两个单独的任务的方案：创建 SQL 数据库和安装 App-V 服务器功能。 这些SQL管理员将能够查看 SQL 脚本并进行修改以解决与其他数据库的任何冲突，或者支持与其他工具集成。 脚本的结果是允许SQL管理员准备数据库，以便基础结构管理员不需要被授予对 SQL 服务器的任何高级权限。 在安全策略禁止这样做的环境中，这一点非常重要。
 
-### SQL 数据库创建过程
+### <a name="sql-database-creation-process"></a>SQL 数据库创建过程
 
-SQL 脚本允许 SQL 管理员创建所需的数据库，还可以设置 App-v 管理员成功安装和管理环境的权限。 本文档后面列出了完成这些任务的步骤。
+这些SQL脚本允许 SQL 管理员创建所需的数据库，并设置 App-V 管理员成功安装和管理环境的权限。 本文档稍后将列出完成这些任务的步骤。
 
-此过程将数据库创建和配置操作与实际的 App-v 安装分开。
+此过程将数据库创建和配置操作与实际的 App-V 安装分开。
 
-**向 SQL 管理员提供的信息**
+**要提供给管理员SQL的信息**
 
--   将成为 App-v 管理员的广告组的名称
+-   要成为 App-V 管理员的 AD 组的名称
 
--   将安装 app-v 管理服务器的服务器的名称
+-   将安装 App-V 管理服务器的服务器的名称
 
-**将返回给基础结构管理员的信息**
+**要返回给基础结构管理员的信息**
 
--   数据库服务器或实例的名称和 App-v 数据库的名称
+-   应用程序或数据库服务器的名称以及 App-V 数据库的名称
 
-准备好数据库后，app-v 管理员无需 SQL 管理员权限即可运行 app-v 安装。
+准备好数据库后，App-V 管理员可以运行 App-V 安装，而无需SQL权限。
 
-### 使用 SQL 安装脚本
+### <a name="using-the-sql-setup-scripts"></a>使用 SQL 安装程序脚本
 
 **要求**
 
-下表列出了使用位于所选提取位置根目录下的 support\\createdb 文件夹中的脚本的要求。
+以下是使用位于所选提取位置根目录的 support\\createdb 文件夹中的脚本的要求列表。
 
--   必须将脚本复制到计算机上将运行的计算机上的可写位置（请确保在复制这些脚本后删除这些脚本中的 read read 属性），并且必须在该计算机上加载 SQL 客户端工具（仅在本地计算机上运行示例批处理文件时才需要 osql）。
+-   必须将脚本复制到计算机上要运行脚本的可写位置 (确保在将脚本复制为) 后从这些脚本中删除只读属性) 并且必须在该计算机上加载 SQL 客户端工具 (只有在本地计算机) 上运行示例批处理文件时，才需要 osql。
 
--   SQL Server 必须支持 Windows 身份验证。
+-   此SQL Server必须支持Windows身份验证。
 
--   确保 SQL Server 实例和 SQL 代理服务正在运行。
+-   确保运行SQL Server实例SQL代理服务。
 
--   使用将在其中完成脚本的计算机上的 SQL 管理员（sysadmin）登录的域帐户登录。
+-   使用域帐户登录，该帐户是SQL执行 (的) 的 sysadmin 管理员帐户。
 
 脚本在登录用户的域凭据下运行。
 
-**使用 SQL 脚本创建数据库**
+**使用脚本创建SQL数据库**
 
-**由 SQL 管理员执行的任务：**
+**由管理员执行SQL任务：**
 
-1.  将 support\\createdb 文件夹中包含的脚本从所选提取位置的根复制到将运行脚本的计算机。 以下文件是脚本正常运行所必需的，并且必须按照下面提供的顺序进行调用。
+1.  将 support\\createdb 文件夹中包含的脚本从所选提取位置的根目录复制到将运行脚本的计算机。 脚本正常运行需要以下文件，并且必须按下面显示的顺序调用这些文件。
 
-    -   数据库 .sql
+    -   database.sql
 
-    -   角色 .sql
+    -   roles.sql
 
-    -   表 \ _CODES .sql
+    -   table\_CODES.sql
 
-    -   函数 \ _before \ _tables .sql
+    -   functions\_before\_tables.sql
 
-    -   表 .sql
+    -   tables.sql
 
-    -   函数 .sql
+    -   functions.sql
 
-    -   视图 .sql
+    -   views.sql
 
-    -   过程 .sql
+    -   procedures.sql
 
-    -   trigger。 sql
+    -   triggers.sql
 
-    -   数据 \ _codes .sql
+    -   data\_codes.sql
 
-    -   数据 \ _messages .sql
+    -   data\_messages.sql
 
-    -   数据 \ _defaults .sql
+    -   data\_defaults.sql
 
-    -   警报 \ _jobs
+    -   alerts\_jobs.sql
 
-    -   dbversion
+    -   dbversion.sql
 
-2.  查看和修改文件（如有必要） `database.sql` 。 默认设置将把数据库命名为 "APPVIRTDB"。
+2.  检查并修改文件（ `database.sql` 如有必要）。 默认设置将数据库名称为"APPVIRTDB"。
 
-    -   如果需要 `APPVIRTDB` `database name` ，请将使用的实例替换为将使用的。
+    -   如有必要，将 的实例 `APPVIRTDB` 替换为 `database name` 将使用的 。
 
-    -   `FILENAME`在脚本中修改将在其中创建数据库的 SQL Server 的相应路径的属性。
+    -   使用将在其中创建数据库的脚本SQL Server `FILENAME` 相应的路径修改脚本中的 属性。
 
-3.  如有必要，请查看并修改 `database name [APPVIRTDB]` `roles.sql` 数据库 .sql 文件中使用的文件中的。
+3.  如有必要，检查和修改 `database name [APPVIRTDB]` `roles.sql` 在 database.sql 文件中使用的 文件。
 
 ****
 
-### 如何使用批处理文件自动化进程的示例
+### <a name="example-of-how-to-automate-the-process-using-batch-files"></a>如何使用批处理文件自动执行此过程的示例
 
-如果使用，则提供的两个示例批处理文件按以下方式运行 SQL 脚本：
+如果使用，提供的两个示例批处理文件SQL运行脚本：
 
-1.  **Create\_schema.bat （1）**
+1.  **Create\_schema.bat (1) **
 
-    -   数据库 .sql
+    -   database.sql
 
-    -   角色 .sql
+    -   roles.sql
 
-2.  **Create\_tables.bat （2）**
+2.  **Create\_tables.bat (2) **
 
-    -   表 \ _CODES .sql
+    -   table\_CODES.sql
 
-    -   函数 \ _before \ _tables .sql
+    -   functions\_before\_tables.sql
 
-    -   表 .sql
+    -   tables.sql
 
-    -   函数 .sql
+    -   functions.sql
 
-    -   视图 .sql
+    -   views.sql
 
-    -   过程 .sql
+    -   procedures.sql
 
-    -   trigger。 sql
+    -   triggers.sql
 
-    -   数据 \ _codes .sql
+    -   data\_codes.sql
 
-    -   数据 \ _messages .sql
+    -   data\_messages.sql
 
-    -   数据 \ _defaults .sql
+    -   data\_defaults.sql
 
-    -   警报 \ _jobs
+    -   alerts\_jobs.sql
 
-    -   dbversion
+    -   dbversion.sql
 
 **注意**  
-必须仔细考虑修改脚本时必须采取的措施，并且只能由具有相应知识的人执行。 此外，仅显示以下内容的示例文件应更改： **create\_schema.bat**、 **create\_tables.bat**、 **.sql**和**roles**。 不应以任何方式修改所有其他文件，因为这可能会导致数据库不正确地创建，这将导致安装 App-v 服务失败。
+修改脚本时必须仔细考虑，并且只应由具有相应知识的人完成。 此外，应更改仅呈现以下内容的示例文件：create\_schema.bat、create\_tables.bat、database.sql 和**** **roles.sql** ****。 ** ** 不应以任何方式修改所有其他文件，因为这可能导致错误创建数据库，这可能会导致安装 App-V 服务失败。
 
 
 
-两个示例批处理文件必须放置在计算机上复制到其他 SQL 脚本的同一目录中。
+这两个示例批处理文件必须放在计算机上将其余 SQL脚本复制到的目录中。
 
-1.  运行示例**create\_schema.bat**文件以创建数据库。 此脚本将需要几秒钟才能完成，不应被打断。
+1.  运行示例 **create\_schema.bat** 文件以创建数据库。 此脚本需要几秒钟才能完成，并且不应中断。
 
-    -   从将其复制到的目录运行 "创建 schema.bat" 文件。 语法为： "Create\_schema.bat `SQLSERVERNAME` "
+    -   从复制到schema.bat目录中运行 create schema.bat 文件。 语法为 `SQLSERVERNAME` ："Create\_schema.bat"
 
-        ![AppV46SQLcreatebat](images/appv46sqlcreatebat.bmp)
+        ![AppV46SQLcreatebat。](images/appv46sqlcreatebat.bmp)
 
-    -   如果此脚本在创建新的 "APPVIRTDB" 数据库期间失败，请按指示的说明检查日志以更正此问题。 有必要删除部分运行脚本创建的数据库，以确保后续的尝试将正常工作。
+    -   如果在新建"APPVIRTDB"数据库期间此脚本失败，请检查指示的日志以更正问题。 必须删除部分运行脚本创建的数据库，以确保后续尝试能够正常工作。
 
-2.  运行 `create_tables.bat` 文件以在数据库中创建表。 此脚本将需要几秒钟才能完成，不应被打断。
+2.  运行 `create_tables.bat` 文件以在数据库中创建表。 此脚本需要几秒钟才能完成，并且不应中断。
 
-    -   从复制文件的目录运行 create\_tables.bat 文件。 语法为： "create\_tables.bat `SQLSERVERNAME DBNAME` "
+    -   从create\_tables.bat目录中运行文件。 语法为 `SQLSERVERNAME DBNAME` ："create\_tables.bat"
 
-        ![app-v 4.6 sql create\-table.bat](images/appv46sqlcreate-tablebat.gif)
+        ![app-v 4.6 sql create\-table.bat。](images/appv46sqlcreate-tablebat.gif)
 
-        如果在创建表过程中脚本失败，请按指示的方式查看日志以更正此问题。 必须先删除数据库并运行 create\_schema.bat，然后才能尝试在所有后续尝试上运行 create\_tables.bat 文件。
+        如果在创建表期间脚本失败，请检查指示的日志以更正问题。 在尝试在所有后续尝试中运行 create\_schema.bat 之前，需要删除数据库并运行create\_tables.bat文件。
 
-### 在 App-v 数据库上设置权限
+### <a name="setting-permissions-on-the-app-v-database"></a>设置对 App-V 数据库的权限
 
-需要在 SQL server 上创建以下帐户，并将特定权限和角色安装到新数据库中，以便安装、部署和持续管理 App-v 环境。
+以下帐户将需要在 SQL 服务器上创建，这些帐户具有新数据库的特定权限和角色，才能安装、部署和持续管理 App-V 环境。
 
--   在 SQL Server 上创建 app-v 管理员组的登录和 "domain\\App-V Admins" 的 APPVIRTDB 数据库（其中 "域" 和 "App-v Admins" 将更改为反映你自己的环境），并将其添加到 SFTAdmin 和 SFTEveryone 数据库角色。
+-   在 SQL Server 上为 App-V 管理员组创建登录名，为"domain\\App-V 管理员"创建 APPVIRTDB 数据库 (其中"域"和"App-V 管理员"将发生更改以反映您自己的环境) 并将其添加到 SFTAdmin 和 SFTEveryone 数据库角色。
 
-    ![app-v 4.6 sql 脚本设置权限和角色](images/appv46sqlscriptsetpermsroles.gif)
+    ![app-v 4.6 sql 脚本集权限和角色。](images/appv46sqlscriptsetpermsroles.gif)
 
--   在全局级别授予此组 "查看任何定义" 权限（这允许 Microsoft Application Virtualization 管理服务器安装过程验证管理服务器登录是否已存在）。 在 MS-SQL 2005 及更高版本下，已添加对 master 数据库中包含的元数据的访问限制。 在上一步中创建的用户默认情况下，不会拥有服务器安装所需的权限。 打开以前创建的登录、登录属性-Securables 的属性 &gt; 。 添加数据库实例，并为 "查看任何定义" 启用 "授权"，如下面的屏幕截图中所示。
+-   在全局级别向此组授予"查看任何定义" (这允许 Microsoft Application Virtualization Management Server 安装过程验证管理服务器登录名) 。 在 MS-SQL 2005 及以上下添加了对 master.db 中包含的元数据的访问限制。 默认情况下，在上一步中创建的用户将没有服务器安装所需的权限。 打开以前创建的登录名的属性 Login Properties- &gt; Securables。 添加 Database 实例，并针对"查看任何定义"启用"GRANT"，如下面的屏幕截图所示。
 
-    ![app-v 4.6 sql 脚本授予 perm 以查看任何定义](images/appv46sqlscriptviewanydef.gif)
+    ![app-v 4.6 sql script grant perm for view any def.](images/appv46sqlscriptviewanydef.gif)
 
--   将角色添加到在上一步中创建的登录的角色 \ _ASSIGNMENTS 表，以允许 App-v 管理员访问应用程序虚拟化管理控制台，角色 = "管理员" 和组 \ _ref = "domain\\App-V Admins" （其中，"域" 和 "App-v Admins" 将更改以反映你自己的环境）。
+-   将角色添加到在上一步中创建的登录名的 ROLE\_ASSIGNMENTS 表中，以允许 App-V 管理员访问 Application Virtualization Management Console，角色为"ADMIN"，group\_ref = "domain\\App-V Admins" (其中"domain"和"App-V Admins"将发生更改以反映您自己的环境) 。
 
-    ![app-v 4.6 sql 脚本角色分配](images/appv46sqlscriptroleassign.gif)
+    ![app-v 4.6 sql 脚本角色分配。](images/appv46sqlscriptroleassign.gif)
 
--   为管理服务器创建 SQL Server 和 App-v 数据库的登录。 Microsoft Application Virtualization 管理服务器使用此帐户连接到数据存储，并且负责为流处理应用程序提供客户端请求。 根据 SQL Server 和管理服务器的安装位置，有两个选项：
+-   为管理服务器SQL Server App-V 数据库创建登录名。 Microsoft Application Virtualization Management Server 使用该帐户连接到数据存储，并负责为流式处理应用程序的客户端请求提供服务。 有两个选项，具体取决于SQL Server服务器和管理服务器的安装位置：
 
-    1.  如果要在同一台计算机上安装管理服务器和 SQL Server，请为 NT AUTHORITY\\NETWORK 服务添加登录，并将其添加到 SFTUser 和 SFTEveryone 数据库角色。
+    1.  如果管理服务器SQL Server将安装在同一计算机上，请添加 NT AUTHORITY\\NETWORK SERVICE 的登录名，并将其添加到 SFTUser 和 SFTEveryone 数据库角色。
 
-    2.  如果管理服务器和 SQL Server 要安装在不同的计算机上，请为 "domain\\App-V Server Name $" 添加登录名（其中，"App-v Server Name" 是安装 App-v 管理服务器的服务器的名称），并将其添加到 SFTUser 和 SFTEveryone 数据库角色。
+    2.  如果要在不同计算机上安装管理服务器和 SQL Server，请为"domain\\App-V Server Name$"添加登录名 (其中"App-V 服务器名称"是安装 App-V 管理服务器的服务器的名称) 并将其添加到 SFTUser 和 SFTEveryone 数据库角色中。
 
--   在 SQL 窗口中打开 "查询" 窗口，然后运行以下 SQL：
+-   打开查询窗口上的SQL，然后运行以下SQL：
 
     ``` syntax
     USE APPVIRTDB
     GRANT ALTER ON ROLE::SFTuser TO “domain\App-V Admins”
     ```
 
-    其中，APPVIRTDB 是在上一步中在 SQL Server 上创建的 app-v 数据库的名称，并且要执行应用 v 服务器安装的用户需要是 "domain\\App-V Admins" 的成员（其中，"domain" 和 "App-v Admins" 将更改为反映你自己的环境）。
+    其中 APPVIRTDB 是上一步中在 SQL Server 上创建的 App-V 数据库的名称，并且要安装 App-v 服务器的用户需要是"domain\\App-V Admins" (其中"domain"和"App-V Admins"将发生更改以反映您自己的环境) 。
 
-### 由基础结构管理员执行的任务
+### <a name="tasks-to-be-performed-by-the-infrastructure-administrators"></a>基础结构管理员要执行的任务
 
-1.  "App-V 管理员" 组中的管理员应安装 app-v。
+1.  "App-V 管理员"组的管理员应安装 App-V。
 
-    使用 SQL 管理员的信息选择在前面的步骤中创建的 SQL Server 和数据库。
+    使用来自管理员SQL，以选择SQL Server步骤中创建的数据库和数据库。
 
-2.  "App-v Admins" 组中的管理员登录到应用程序虚拟化管理控制台并从管理控制台中删除以下对象。
+2.  "App-V 管理员"组的管理员登录到 Application Virtualization Management Console，然后从管理控制台中删除以下对象。
 
     **警告**  
-    这是必需的，因为传统安装会在您针对现有数据库运行安装时填充数据库中未填充的特定记录。 删除以下对象：
+    这是必填项，因为如果对已有的数据库运行安装，则传统安装程序会填充数据库中未填充的某些记录。 删除以下对象：
 
-    -   "服务器组"、"默认服务器组"、"删除" 应用程序虚拟化管理服务器 "下的" 删除 "
+    -   在"服务器组"、"默认服务器组"下，删除"Application Virtualization Management Server"
 
-    -   在 "服务器组" 下，删除 "默认服务器组"
+    -   在"服务器组"下，删除"默认服务器组"
 
-    -   在 "提供商策略" 下，删除 "默认提供商"
+    -   在"提供程序策略"下，删除"默认提供程序"
 
 
 
-3.  然后，app-v 管理员组中的管理员应创建：
+3.  然后，App-V 管理员组的管理员应创建：
 
-    -   在 "提供商策略" 下，创建新的提供商策略
+    -   在"提供程序策略"下，创建新的提供程序策略
 
-    -   创建 "默认服务器组"
+    -   创建"默认服务器组"
 
         **注意**  
-        您必须创建一个 "默认服务器" 组，即使您不会使用。 服务器安装程序仅在尝试添加服务器时查找 "默认服务器组"。  如果没有 "默认服务器组"，安装将失败。 如果你计划使用不是默认设置的服务器组，并且你计划将后续的 App-v 管理服务器添加到你的基础结构，则只需保留 "默认服务器组"。
+        即使不会使用，也必须创建"默认服务器"组。 服务器安装程序仅在尝试添加服务器时查找"默认服务器组"。  如果没有"默认服务器组"，则安装将失败。 如果计划使用非默认服务器组，则只需保留"默认服务器组"，如果计划将后续 App-V 管理服务器添加到基础结构中。
 
 
 
@@ -247,10 +247,10 @@ SQL 脚本允许 SQL 管理员创建所需的数据库，还可以设置 App-v �
 -   Administrator restarts the Application Virtualization Management Server service.
 ~~~
 
-## 总结
+## <a name="conclusion"></a>总结
 
 
-总之，本文档中的信息允许管理员使用 SQL 管理员开发适用于组织中的安全和管理划分的部署路径。 阅读此文档并测试记录的任务后，管理员应准备好在此类型的环境中实现其 App-v 基础结构。
+总之，通过本文档中的信息，管理员可以与 SQL 管理员合作，以开发适用于组织中安全和管理分区的部署路径。 在阅读本文档并测试记录的任务后，管理员应准备好在此类型的环境中实施其 App-V 基础结构。
 
 
 
